@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
     respond_to :html
-    
+    helper StaticPagesHelper
     def show
         @user = User::find(params[:id])
         @is_me = @user.id == current_user.id ? true : false
@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 
     def index
         @users = User.all
-        @users = User.paginate(page: params[:page], per_page: 2)
+        @users = User.paginate(page: params[:page], per_page: 10)
         respond_with(@users)
     end
     

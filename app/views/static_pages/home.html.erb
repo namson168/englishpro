@@ -1,26 +1,10 @@
 
-<h1>This is our home page</h1>
-<p>ホームページです</p>
+  <div class="center jumbotron">
+    <h2>Welcome to EnglishPro</h2>
+      <% if user_signed_in? %>
+        <%= link_to "Create new plan", new_plan_path, class: "btn btn-lg btn-primary" %>
+      <% else %>
+        <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+      <% end %>
+  </div>
 
-<% if user_signed_in? %>
-    <h3>Current goal:</h3>
-    <% plancount = 0 %>
-    <% current_user.plans.each do |plan| %>
-    <% if !plan.is_over? %>
-        <h4><%= current_plan_explanation(plan) %></h4>
-        <p><%= plan_completed(plan) %></p>
-        <p><%= plan_left(plan) %></p>
-        <p><%= plan_suggestion(plan) %></p>
-        <%= line_chart [{name:"済んだレッソン/テストの数", data: chart_data_about_plan_completed(plan)},
-        {name: "ゴールの理想的な平均のレッソン/テストの数", data: chart_data_plan_ideal_suggestion(plan)}],
-        library: {'hAxis' => {'format' => 'yyyy/MM/dd'}}%>
-    <% end %>
-    <% end %>
-
-  <% end %>  
-  <% if user_signed_in? %>
-    <%= link_to "Create new plan", new_plan_path, class: "btn btn-lg btn-primary" %>
-  <% else %>
-    <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
-  <% end %>
-</div>
