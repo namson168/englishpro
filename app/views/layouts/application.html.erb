@@ -4,20 +4,14 @@
   <title>Workspace</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<% if user_signed_in? %>
-  <h3>Hello, <%= current_user.email%>!</h3>
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete%>
-<% else %>
-  <%= link_to "サインイン", new_user_session_path%>
-  <%= link_to "登録", new_user_registration_path%>
-<% end %>
-<hr>
-
-<%= yield %>
-
+  <%= render 'layouts/header' %>
+  <div class="container">
+    <%= yield %>
+  <%= render 'layouts/footer' %>
+  </div>
 </body>
 </html>

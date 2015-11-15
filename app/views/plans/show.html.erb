@@ -1,24 +1,36 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
+  <strong>ユーザ：</strong>
   <%= @plan.user.name %>
 </p>
 
 <p>
-  <strong>Act:</strong>
+  <strong>タイプ：</strong>
   <%= @plan.act %>
 </p>
 
 <p>
-  <strong>How many:</strong>
+  <strong>ワード数：</strong>
   <%= @plan.how_many %>
 </p>
 
 <p>
-  <strong>Deadline:</strong>
+  <strong>締め切り：</strong>
   <%= @plan.deadline %>
 </p>
+<hr>
+<p>
+          <% if !@plan.is_over? %>
+          <h4><%= current_plan_explanation(@plan) %></h4>
+          <p><%= plan_completed(@plan) %></p>
+          <p><%= plan_left(@plan) %></p>
+          <p><%= plan_suggestion(@plan) %></p>
+          <%= line_chart [{name:"済んだレッソン/テストの数", data: chart_data_about_plan_completed(@plan)},
+          {name: "ゴールの理想的な平均のレッソン/テストの数", data: chart_data_plan_ideal_suggestion(@plan)}],
+          library: {'hAxis' => {'format' => 'yyyy/MM/dd'}}%>
+        <% end %>
+</p>
 
-<%= link_to 'Edit', edit_plan_path(@plan) %> |
-<%= link_to 'Back', plans_path %>
+<%= link_to 'Edit', edit_plan_path(@plan), class: "btn bt-success" %> |
+<%= link_to 'Back', plans_path, class: "btn btn-primary" %>
