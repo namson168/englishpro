@@ -1,0 +1,12 @@
+length:
+  page: 10
+all: "get_all"
+learned: "learned"
+not_learned: "not_learned"
+avatar_size: 2
+picture_size: 2
+picture_index_size: "100"
+avatar_index_size: "50"
+max_word_per_lesson: 20
+min_word_per_lesson: 1
+time_per_word: 5

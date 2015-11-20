@@ -1,0 +1,27 @@
+<li class="lesson">
+  <div class="row">
+    <span class="col-md-2">
+      <% if lesson.picture? %>
+        <%= image_tag lesson.picture.url, size: Settings.picture_index_size %>
+      <% else %>
+        <%= image_tag "default-picture.png", size: Settings.picture_index_size %>
+      <% end %>
+    </span>
+    <span class="col-md-3 name"><%= link_to lesson.name, lesson %> </span>
+    <span class="col-md-1 buton"><%= link_to t("start_lession"),
+    lesson_tests_path(lesson_id: lesson.id), method: :post,
+      class: "btn btn-primary" %>
+    </span>
+  </div>
+  <div class="row">
+      <div class="progress col-md-6 ">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" 
+    style="width:  <%= (lesson.words.count > 0) ? (lesson.words.learned(current_user).count*100/lesson.words.count) : 0 %>%">
+      <span><%= (lesson.words.count > 0) ? (lesson.words.learned(current_user).count*100/lesson.words.count) : 0 %>%</span>
+        </div>
+     </div>
+     <div class="col-md-3">
+        <span class="badge"><%= lesson.words.learned(current_user).count %>/<%= lesson.words.count %></span>
+     </div>
+  </div>
+</li>

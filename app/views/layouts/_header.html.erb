@@ -28,6 +28,9 @@
               <li><%= link_to " プロファイル" , user_path(current_user), class: "glyphicon glyphicon-user" %></li>
               <li><%= link_to " 情報の編集", edit_user_registration_path(current_user), class: "glyphicon glyphicon-pencil" %></li>
               <li class="divider"></li>
+               <li><%= link_to " Word list ", words_path, class: "glyphicon glyphicon-search" %></li>
+              <li><%= link_to " Lesson ", lessons_path, class: "glyphicon glyphicon-list-alt" %></li>
+              <li class="divider"></li>
               <li>
                 <%= link_to " ログアウト", destroy_user_session_path,  class: "glyphicon glyphicon-log-out", method: :delete %>
               </li>

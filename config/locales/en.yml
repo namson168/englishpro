@@ -21,3 +21,18 @@
 
 en:
   hello: "Hello world"
+  search: "Search"
+  lessons: "Lessons"
+  picture_error: "Picture errors"
+  word: "Word"
+  mean: "Mean"
+  start_lession: "Start Test!"
+  not_enough_word: "Not enough word"
+  not_enough_word: "Not enough not-learned-word to create test!"
+  create_test_fail: "Could not create test"
+  create_test_success: "Test was successfully created"
+  update_test_success: "Test was successfully updated"
+  update_test_fail: "Could not update test"
+  point: "Point: "
+  word_index: "Word "
+  submit: "Submit" 

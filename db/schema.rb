@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151115184941) do
+ActiveRecord::Schema.define(version: 20151120052134) do
 
   create_table "answers", force: :cascade do |t|
     t.string   "content"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20151115184941) do
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "picture"
   end
 
   add_index "lessons", ["name"], name: "index_lessons_on_name", unique: true

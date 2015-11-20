@@ -32,7 +32,7 @@ RailsAdmin.config do |config|
   # Or with a PaperTrail: (you need to install it first)
   # config.audit_with :paper_trail, User
   # Set the admin name here (optional second array element will appear in a beautiful RailsAdmin red ©)
-  config.main_app_name = ['Admin Showdown', 'Admin']
+  config.main_app_name = ['EnglishPro', 'Admin']
   # or for a dynamic name:
   # config.main_app_name = Proc.new { |controller| [Rails.application.engine_name.titleize, controller.params['action'].titleize] }
   #  ==> Global show view settings
@@ -43,7 +43,7 @@ RailsAdmin.config do |config|
   # config.default_items_per_page = 20
   #  ==> Included models
   # Add all excluded models here:
-  config.excluded_models = [Answer, Test, Friend,Result]
+  # config.excluded_models = [Answer, Test, Friend,Result]
   # Add models here if you want to go 'whitelist mode':
   # config.included_models = [Category, Customer, Item]
   # Application wide tried label methods for models' instances
