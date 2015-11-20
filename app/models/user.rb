@@ -27,6 +27,9 @@ class User < ActiveRecord::Base
   def friends
     Friend.where("user_id = ? or friend_id = ?", self.id, self.id)
   end
+  def gender_enum
+   [['Male'],['Female'],['Unknow']]
+  end
 
 end
 

@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'devise'
 gem 'chartkick'
+gem 'rails_admin'
 
 # Bootstrap for CSS
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5.1'
