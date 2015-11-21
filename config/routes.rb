@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :words
+  resources :lessons do
+    resources :tests
+  end
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :plans
   resources :user_logs
   root 'static_pages#home'

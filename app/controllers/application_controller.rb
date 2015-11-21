@@ -4,10 +4,27 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   before_filter :configure_permitted_parameters, if: :devise_controller?
+  
+  
+  
+  def logged_in_user
+    unless logged_in?
+      store_location
+      flash[:danger] = t "login_mess"
+      redirect_to login_url
+    end
+  end
+  
+  def logged_in?
+    !current_user.nil?
+  end
 
   protected
     def configure_permitted_parameters
         devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email, :password, :name, :age, :gender) }
         devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:email, :password, :name, :age, :gender) }
     end
+    
+    
+    
 end

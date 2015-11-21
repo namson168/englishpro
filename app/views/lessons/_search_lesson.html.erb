@@ -1,0 +1,12 @@
+<%= form_tag lessons_path, method: "get", remote: true do %>
+  <%= label_tag t "search"%>
+  <div class="row">
+    <div class="col-md-5">
+      <%= text_field_tag :search_lesson, params[:search_lesson],
+        class:"form-control" %>
+    </div>
+    <div class="col-md-2">
+      <%= submit_tag t("search"), class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

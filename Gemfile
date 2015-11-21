@@ -2,7 +2,11 @@ source 'https://rubygems.org'
 
 gem 'devise'
 gem 'chartkick'
-
+gem 'rails_admin'
+gem 'config'
+gem 'carrierwave'           
+gem 'mini_magick'            
+gem 'fog'                  
 # Bootstrap for CSS
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5.1'
 
