@@ -27,10 +27,10 @@
     <%= f.text_field :name,  class: "form-control" %>
   </div>
   
-  <div class="field">
-    <%= f.label :gender %><br />
-    <%= f.select :gender, options_for_select(["Male", "Female"], "Male"),  class: "form-control"  %><br />
-  </div>
+      <div class="field">
+        <%= f.label :gender %><br />
+        <%= f.select :gender, options_for_select(["===","男性", "女性"], "==="),  class: "form-control"  %><br />
+      </div>
 
   <div class="field">
     <%= f.label :age %><br />

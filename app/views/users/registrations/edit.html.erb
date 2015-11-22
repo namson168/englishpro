@@ -28,9 +28,14 @@
         <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
       </div>
       
-        <div class="field">
+      <div class="field">
         <%= f.label :name %><br />
         <%= f.text_field :name, :value => current_user.name, class: "form-control"%>
+      </div>
+    
+      <div class="field">
+        <%= f.label :gender %><br />
+        <%= f.select :gender, options_for_select(["===","男性", "女性"], current_user.gender),  class: "form-control"  %><br />
       </div>
     
       <div class="field">
