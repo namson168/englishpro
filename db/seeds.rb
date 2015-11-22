@@ -83,7 +83,7 @@ Word.create content: "sleepwalking", lesson_id: 2
 Word.create content: "nightmare", lesson_id: 2
 Word.create content: "fun", lesson_id: 2
 Word.create content: "bored", lesson_id: 3
-Word.create content: "relaxing", lesson_id: 3
+Word.create content: "rest", lesson_id: 3
 Word.create content: "tired", lesson_id: 3
 Word.create content: "feeling", lesson_id: 3
 Word.create content: "company", lesson_id: 3
@@ -176,130 +176,130 @@ Word.create content: "comfort", lesson_id: 5
 
 # seed answers
 
-Answer.create content: "gọi điện", correct: true, word_id: 1
-Answer.create content: "nhắn tin", correct: false, word_id: 1
-Answer.create content: "gửi", correct: false, word_id: 1
-Answer.create content: "gõ", correct: false, word_id: 1
+Answer.create content: "電話をかける", correct: true, word_id: 1
+Answer.create content: "メッセージ", correct: false, word_id: 1
+Answer.create content: "送る", correct: false, word_id: 1
+Answer.create content: "打つ", correct: false, word_id: 1
 
-Answer.create content: "văn bản", correct: true, word_id: 2
-Answer.create content: "chữ cái", correct: false, word_id: 2
-Answer.create content: "kí tự", correct: false, word_id: 2
-Answer.create content: "thư", correct: false, word_id: 2
+Answer.create content: "テキスト", correct: true, word_id: 2
+Answer.create content: "文字", correct: false, word_id: 2
+Answer.create content: "字", correct: false, word_id: 2
+Answer.create content: "メール", correct: false, word_id: 2
 
-Answer.create content: "nhớ", correct: false, word_id: 3
-Answer.create content: "yêu", correct: false, word_id: 3
-Answer.create content: "ghét", correct: false, word_id: 3
-Answer.create content: "quên", correct: true, word_id: 3
+Answer.create content: "懐かしい", correct: false, word_id: 3
+Answer.create content: "愛する", correct: false, word_id: 3
+Answer.create content: "嫌がる", correct: false, word_id: 3
+Answer.create content: "忘れる", correct: true, word_id: 3
 
-Answer.create content: "cuộc gọi", correct: false, word_id: 4
-Answer.create content: "tin nhắn", correct: true, word_id: 4
-Answer.create content: "thư điện tử", correct: false, word_id: 4
-Answer.create content: "lời chào", correct: false, word_id: 4
+Answer.create content: "電話", correct: false, word_id: 4
+Answer.create content: "メッセージ", correct: true, word_id: 4
+Answer.create content: "Eメール", correct: false, word_id: 4
+Answer.create content: "挨拶", correct: false, word_id: 4
 
-Answer.create content: "tán gẫu", correct: true, word_id: 5
-Answer.create content: "an ủi", correct: false, word_id: 5
-Answer.create content: "đuổi bắt", correct: false, word_id: 5
-Answer.create content: "ngủ", correct: false, word_id: 5
+Answer.create content: "しゃべる", correct: true, word_id: 5
+Answer.create content: "励ます", correct: false, word_id: 5
+Answer.create content: "追う", correct: false, word_id: 5
+Answer.create content: "寝る", correct: false, word_id: 5
 
-Answer.create content: "ăn", correct: false, word_id: 6
-Answer.create content: "ngủ", correct: true, word_id: 6
-Answer.create content: "uống", correct: false, word_id: 6
-Answer.create content: "chạy", correct: false, word_id: 6
+Answer.create content: "食べる", correct: false, word_id: 6
+Answer.create content: "寝る", correct: true, word_id: 6
+Answer.create content: "飲む", correct: false, word_id: 6
+Answer.create content: "走る", correct: false, word_id: 6
 
-Answer.create content: "hy vọng", correct: false, word_id: 7
-Answer.create content: "kỉ niệm", correct: false, word_id: 7
-Answer.create content: "giấc mơ", correct: true, word_id: 7
-Answer.create content: "tình yêu", correct: false, word_id: 7
+Answer.create content: "希望", correct: false, word_id: 7
+Answer.create content: "記憶", correct: false, word_id: 7
+Answer.create content: "夢", correct: true, word_id: 7
+Answer.create content: "愛", correct: false, word_id: 7
 
-Answer.create content: "đi dạo", correct: false, word_id: 8
-Answer.create content: "ngủ nướng", correct: false, word_id: 8
-Answer.create content: "mơ mộng", correct: false, word_id: 8
-Answer.create content: "mộng du", correct: true, word_id: 8
+Answer.create content: "うろうろする", correct: false, word_id: 8
+Answer.create content: "寝過ごす", correct: false, word_id: 8
+Answer.create content: "夢幻的", correct: false, word_id: 8
+Answer.create content: "夢中遊行症", correct: true, word_id: 8
 
-Answer.create content: "ác mộng", correct: true, word_id: 9
-Answer.create content: "giấc mơ", correct: false, word_id: 9
-Answer.create content: "bữa ăn", correct: false, word_id: 9
-Answer.create content: "bữa tối", correct: false, word_id: 9
+Answer.create content: "悪魔", correct: true, word_id: 9
+Answer.create content: "夢", correct: false, word_id: 9
+Answer.create content: "食事", correct: false, word_id: 9
+Answer.create content: "夕食", correct: false, word_id: 9
 
-Answer.create content: "đẹp", correct: false, word_id: 10
-Answer.create content: "có ích", correct: false, word_id: 10
-Answer.create content: "khoẻ", correct: false, word_id: 10
-Answer.create content: "vui", correct: true, word_id: 10
+Answer.create content: "綺麗", correct: false, word_id: 10
+Answer.create content: "役に立つ", correct: false, word_id: 10
+Answer.create content: "健康", correct: false, word_id: 10
+Answer.create content: "嬉しい", correct: true, word_id: 10
 
-Answer.create content: "vui vẻ", correct: false, word_id: 11
-Answer.create content: "nhàm chán", correct: true, word_id: 1
-Answer.create content: "yên tĩnh", correct: false, word_id: 11
-Answer.create content: "phấn khích", correct: false, word_id: 11
+Answer.create content: "嬉しい", correct: false, word_id: 11
+Answer.create content: "つまらない", correct: true, word_id: 1
+Answer.create content: "静か", correct: false, word_id: 11
+Answer.create content: "わくわくする", correct: false, word_id: 11
 
-Answer.create content: "thư giãn", correct: true, word_id: 12
-Answer.create content: "làm việc", correct: false, word_id: 12
-Answer.create content: "học", correct: false, word_id: 12
-Answer.create content: "nấu nướng", correct: false, word_id: 12
+Answer.create content: "リラックス", correct: true, word_id: 12
+Answer.create content: "働く", correct: false, word_id: 12
+Answer.create content: "勉強", correct: false, word_id: 12
+Answer.create content: "料理", correct: false, word_id: 12
 
-Answer.create content: "hài hước", correct: false, word_id: 13
-Answer.create content: "khoẻ mạnh", correct: false, word_id: 13
-Answer.create content: "mệt mỏi", correct: true, word_id: 13
-Answer.create content: "chăm chỉ", correct: false, word_id: 13
+Answer.create content: "可笑しい", correct: false, word_id: 13
+Answer.create content: "健康", correct: false, word_id: 13
+Answer.create content: "疲れる", correct: true, word_id: 13
+Answer.create content: "真面目", correct: false, word_id: 13
 
-Answer.create content: "tình cảm", correct: false, word_id: 14
-Answer.create content: "hành động", correct: false, word_id: 14
-Answer.create content: "ý thức", correct: false, word_id: 14
-Answer.create content: "cảm giác", correct: true, word_id: 14
+Answer.create content: "感じ", correct: false, word_id: 14
+Answer.create content: "行為", correct: false, word_id: 14
+Answer.create content: "意思", correct: false, word_id: 14
+Answer.create content: "気持ち", correct: true, word_id: 14
 
-Answer.create content: "công ty", correct: true, word_id: 15
-Answer.create content: "nhà hàng", correct: false, word_id: 15
-Answer.create content: "khách sạn", correct: false, word_id: 15
-Answer.create content: "vũ trường", correct: false, word_id: 15
+Answer.create content: "会社", correct: true, word_id: 15
+Answer.create content: "レストラン", correct: false, word_id: 15
+Answer.create content: "ホテル", correct: false, word_id: 15
+Answer.create content: "港", correct: false, word_id: 15
 
-Answer.create content: "máy móc", correct: false, word_id: 16
-Answer.create content: "thợ xây", correct: false, word_id: 16
-Answer.create content: "xe đạp", correct: false, word_id: 16
-Answer.create content: "toà nhà", correct: true, word_id: 16
+Answer.create content: "機関", correct: false, word_id: 16
+Answer.create content: "鍵", correct: false, word_id: 16
+Answer.create content: "自転車", correct: false, word_id: 16
+Answer.create content: "建物", correct: true, word_id: 16
 
-Answer.create content: "ông chủ", correct: true, word_id: 17
-Answer.create content: "nhân viên", correct: false, word_id: 17
-Answer.create content: "kế toán", correct: false, word_id: 17
-Answer.create content: "thư kí", correct: false, word_id: 17
+Answer.create content: "ボス", correct: true, word_id: 17
+Answer.create content: "社員", correct: false, word_id: 17
+Answer.create content: "子供", correct: false, word_id: 17
+Answer.create content: "会計士", correct: false, word_id: 17
 
-Answer.create content: "nhân viên", correct: true, word_id: 18
-Answer.create content: "ông chủ", correct: false, word_id: 18
-Answer.create content: "khách hàng", correct: false, word_id: 18
-Answer.create content: "đối tác", correct: false, word_id: 18
+Answer.create content: "社員", correct: true, word_id: 18
+Answer.create content: "ボス", correct: false, word_id: 18
+Answer.create content: "人間", correct: false, word_id: 18
+Answer.create content: "会計士", correct: false, word_id: 18
 
-Answer.create content: "tiệc cuối năm", correct: false, word_id: 19
-Answer.create content: "tiệc chia tay", correct: false, word_id: 19
-Answer.create content: "tiệc cưới", correct: false, word_id: 19
-Answer.create content: "tiệc nhà mới", correct: true, word_id: 19
+Answer.create content: "ホテル", correct: false, word_id: 19
+Answer.create content: "別れ", correct: false, word_id: 19
+Answer.create content: "結婚式", correct: false, word_id: 19
+Answer.create content: "倉庫", correct: true, word_id: 19
 
-Answer.create content: "đạp xe", correct: false, word_id: 20
-Answer.create content: "chạy bộ", correct: false, word_id: 20
-Answer.create content: "đi bộ", correct: true, word_id: 20
-Answer.create content: "nâng tạ", correct: false, word_id: 20
+Answer.create content: "サイクル", correct: false, word_id: 20
+Answer.create content: "走る", correct: false, word_id: 20
+Answer.create content: "歩行", correct: true, word_id: 20
+Answer.create content: "釣り", correct: false, word_id: 20
 
-Answer.create content: "viết", correct: true, word_id: 21
-Answer.create content: "đánh máy", correct: false, word_id: 21
-Answer.create content: "đi bộ", correct: false, word_id: 21
-Answer.create content: "đọc", correct: false, word_id: 21
+Answer.create content: "書く", correct: true, word_id: 21
+Answer.create content: "タイピング", correct: false, word_id: 21
+Answer.create content: "ジョギング", correct: false, word_id: 21
+Answer.create content: "読む", correct: false, word_id: 21
 
-Answer.create content: "giảng dạy", correct: false, word_id: 22
-Answer.create content: "nội trợ", correct: true, word_id: 22
-Answer.create content: "thể thao", correct: false, word_id: 22
-Answer.create content: "học tập", correct: false, word_id: 22
+Answer.create content: "教える", correct: false, word_id: 22
+Answer.create content: "料理", correct: true, word_id: 22
+Answer.create content: "スポーツ", correct: false, word_id: 22
+Answer.create content: "勉強", correct: false, word_id: 22
 
-Answer.create content: "đạp xe", correct: false, word_id: 23
-Answer.create content: "bơi lội", correct: false, word_id: 23
-Answer.create content: "du lịch", correct: false, word_id: 23
-Answer.create content: "mua sắm", correct: true, word_id: 23
+Answer.create content: "サイクル", correct: false, word_id: 23
+Answer.create content: "泳ぐ", correct: false, word_id: 23
+Answer.create content: "旅行", correct: false, word_id: 23
+Answer.create content: "買う", correct: true, word_id: 23
 
-Answer.create content: "bơi lội", correct: true, word_id: 24
-Answer.create content: "đá bóng", correct: false, word_id: 24
-Answer.create content: "mua sắm", correct: false, word_id: 24
-Answer.create content: "học tập", correct: false, word_id: 24
+Answer.create content: "泳ぐ", correct: true, word_id: 24
+Answer.create content: "サッカー", correct: false, word_id: 24
+Answer.create content: "買う", correct: false, word_id: 24
+Answer.create content: "勉強", correct: false, word_id: 24
 
-Answer.create content: "nóng bức", correct: false, word_id: 25
-Answer.create content: "no", correct: false, word_id: 25
-Answer.create content: "ốm", correct: false, word_id: 25
-Answer.create content: "dễ chịu", correct: true, word_id: 25
+Answer.create content: "熱い", correct: false, word_id: 25
+Answer.create content: "お腹いっぱい", correct: false, word_id: 25
+Answer.create content: "病気", correct: false, word_id: 25
+Answer.create content: "快適", correct: true, word_id: 25
 
 #seed Tests
 
