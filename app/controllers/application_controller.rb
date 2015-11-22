@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   def logged_in_user
     unless logged_in?
       store_location
-      flash[:danger] = t "login_mess"
+      flash[:danger] = t "ここにアクセスするには、ログイン、または登録してください"
       redirect_to login_url
     end
   end
@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
   protected
     def configure_permitted_parameters
         devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:email, :password, :name, :age, :gender) }
-        devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:email, :password, :name, :age, :gender) }
+        devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:email, :password, :current_password, :name, :age, :gender) }
     end
     
     

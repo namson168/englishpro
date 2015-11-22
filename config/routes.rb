@@ -5,10 +5,10 @@ Rails.application.routes.draw do
   end
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   resources :plans
-  resources :user_logs
+  # resources :user_logs
   root 'static_pages#home'
 
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "registrations", :sessions =>  "sessions"}
   resources :users, only: [:show, :index]
   resources :friends, only: [:create, :destroy, :update, :show]
   # The priority is based upon order of creation: first created -> highest priority.

@@ -8,7 +8,7 @@
       <% end %>
     </span>
     <span class="col-md-3 name"><%= link_to lesson.name, lesson %> </span>
-    <span class="col-md-1 buton"><%= link_to t("start_lession"),
+    <span class="col-md-1 buton"><%= link_to t("テストを始める"),
     lesson_tests_path(lesson_id: lesson.id), method: :post,
       class: "btn btn-primary" %>
     </span>

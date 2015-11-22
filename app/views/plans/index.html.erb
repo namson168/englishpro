@@ -1,33 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<h1>プラン</h1>
+<h1>ゴールリスト</h1>
+<h2><%= link_to '新しいゴール', new_plan_path, class: "btn btn-lg btn-primary" %></h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>ユーザ</th>
-      <th>タイプ</th>
-      <th>ワード数</th>
-      <th>締め切り</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
+<div class="col-md-8 col-md-offset-2 center">
+  <table class="table table-strip">
+    <thead>
+      <tr class="success">
+        <th class="center"><%= t "行為" %></th>
+        <th class="center"><%= t "どのぐらい" %></th>
+        <th class="center"><%= t "締め切り" %></th>
+        <th class="center"><%= t "ステータス" %></th>
+      </tr>
+    </thead>
   <tbody>
     <% @plans.each do |plan| %>
+      <%if plan.user == current_user %>
       <tr>
-        <td><%= plan.user.name %></td>
         <td><%= plan.act %></td>
         <td><%= plan.how_many %></td>
         <td><%= plan.deadline %></td>
-        <td><%= link_to 'Show', plan %></td>
-        <td><%= link_to 'Edit', edit_plan_path(plan) %></td>
-        <td><%= link_to 'Destroy', plan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%if plan.is_completed %>
+          <td><%= link_to '完成', plan %></td>
+          <%elsif plan.is_over? %>
+          <td><%= link_to '失敗', plan %></td>
+          <%else%>
+          <td><%= link_to '実行中', plan %></td>
+        <% end %>
       </tr>
+      <% end %>
     <% end %>
   </tbody>
-</table>
+  </table>
+</div>
 
-<br>
-
-<%= link_to 'New Plan', new_plan_path %>
+<br/>
