@@ -11,32 +11,32 @@
       <% end %>
     
       <div class="field">
-        <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+        <%= f.label "新しいパスワード" %> <i>(パスワードさえ変えたくなければ、ここをブランクのままにしておいてください)</i><br />
         <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
       </div>
     
       <div class="field">
-        <%= f.label :password_confirmation %><br />
+        <%= f.label "新しいパスワード再入力" %><br />
         <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
       </div>
     
       <div class="field">
-        <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+        <%= f.label "現在のパスワード" %> <i>(プロフィール修正を確定するため、現在のパスワードが必要です)</i><br />
         <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
       </div>
       
       <div class="field">
-        <%= f.label :name %><br />
+        <%= f.label "名前" %><br />
         <%= f.text_field :name, :value => current_user.name, class: "form-control"%>
       </div>
     
       <div class="field">
-        <%= f.label :gender %><br />
+        <%= f.label "性" %><br />
         <%= f.select :gender, options_for_select(["===","男性", "女性"], current_user.gender),  class: "form-control"  %><br />
       </div>
     
       <div class="field">
-        <%= f.label :age %><br />
+        <%= f.label "年齢" %><br />
         <%= f.number_field :age, :value => current_user.age, class: "form-control" %>
       </div>
     

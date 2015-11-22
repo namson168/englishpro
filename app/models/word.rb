@@ -5,7 +5,7 @@ class Word < ActiveRecord::Base
   accepts_nested_attributes_for :answers, allow_destroy: true,
     reject_if: proc {|a| a[:content].blank?}
   validates :content, presence: true, uniqueness: true
-  validate :check_correct_answer
+#  validate :check_correct_answer
   
   scope :search, ->search{where "content LIKE ?", "%#{search}%"}
   scope :alphabet, ->{order "content ASC"}
@@ -19,9 +19,9 @@ class Word < ActiveRecord::Base
   scope :get_all, ->user{}
   scope :random_words, ->{order "RANDOM() LIMIT #{Settings.max_word_per_lesson}"}
   
-  private
-  def check_correct_answer
-    errors.add :base, "not choice correct answers" if answers.select{|opt| opt.correct}.blank?
-  end
+#  private
+#  def check_correct_answer
+#    errors.add :base, "not choice correct answers" if answers.select{|opt| opt.correct}.blank?
+#  end
 
 end

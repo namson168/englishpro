@@ -2,13 +2,15 @@ class Plan < ActiveRecord::Base
     belongs_to :user
     
     def task_completed
+      milestone = [DateTime.now, deadline.to_datetime].min
       # UserLog.where({ :created_at => plan.created_at..Time.now}, {:user => self}).count
-      user.user_logs.where({ :created_at => self.created_at...DateTime.now}).count
+      user.tests.where({ :created_at => self.created_at...milestone}).sum("point")
     end
     
     def task_completed_chart_data
+        milestone = [DateTime.now, deadline.to_datetime].min
       # UserLog.where({ :created_at => plan.created_at..Time.now}, {:user => self}).count
-      user.user_logs.where({ :created_at => self.created_at..DateTime.now}).group("strftime('%Y-%m-%d', created_at)").count
+      user.tests.where({ :created_at => self.created_at..milestone}).group("strftime('%Y-%m-%d', created_at)").sum("point")
       # user.user_logs.group_by_day(:created_at, range: self.created_at..DateTime.now).count
     end
     

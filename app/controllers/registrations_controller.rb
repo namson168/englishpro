@@ -8,6 +8,6 @@ class RegistrationsController < Devise::RegistrationsController
 
   def update
     super
-    record_activity(current_user, "プロファイル修正", "", "完成", DateTime.now)
+    record_activity(current_user, "プロフィール修正", "", "完成", DateTime.now)
   end
 end 

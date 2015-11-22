@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :user_logs
   has_many :plans
+  has_many :tests
   
   def status_with friend_id
   if friend = Friend.where(user_id: self.id, friend_id: friend_id).try(:first)

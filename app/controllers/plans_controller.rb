@@ -1,5 +1,6 @@
 class PlansController < ApplicationController
   before_action :set_plan, only: [:show, :edit, :update, :destroy]
+  before_action :logged_in_user
   helper StaticPagesHelper
   # GET /plans
   # GET /plans.json

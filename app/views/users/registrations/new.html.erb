@@ -5,12 +5,12 @@
   <%= devise_error_messages! %>
   
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label "Eメール" %><br />
     <%= f.email_field :email, autofocus: true, class: "form-control" %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label "パスワード" %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
@@ -18,27 +18,27 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label "パスワード再入力" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off",  class: "form-control"  %>
   </div>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label "名前" %><br />
     <%= f.text_field :name,  class: "form-control" %>
   </div>
   
       <div class="field">
-        <%= f.label :gender %><br />
+        <%= f.label "性" %><br />
         <%= f.select :gender, options_for_select(["===","男性", "女性"], "==="),  class: "form-control"  %><br />
       </div>
 
   <div class="field">
-    <%= f.label :age %><br />
+    <%= f.label "年齢" %><br />
     <%= f.number_field :age, min:1, max:100,  class: "form-control"  %>
   </div>
   
   <div class="actions">
-    <%= f.submit "Sign up", class: 'btn btn-info' %>
+    <%= f.submit "登録", class: 'btn btn-info' %>
   </div>
 <% end %>
 
